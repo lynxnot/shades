@@ -1,0 +1,48 @@
+name:                shades
+version:             0.1.0.0
+github:              "githubuser/shades"
+license:             BSD3
+author:              "lynxnot"
+maintainer:          "example@example.com"
+copyright:           "2021 lynxnot"
+
+extra-source-files:
+- README.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/githubuser/shades#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- colour >= 2.0
+- ansi-terminal >= 0.9.1 && <= 0.11
+
+#library:
+#  source-dirs: src
+
+executables:
+  shades:
+    main:                Main.hs
+    source-dirs:         src
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -Wall
+
+tests:
+  shades-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - shades
