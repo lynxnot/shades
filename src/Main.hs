@@ -47,7 +47,7 @@ usage = putStrLn "Usage: shades [#]RRGGBB"
 --
 --
 printDetails :: String -> IO ()
-printDetails hexColor = printShade (parseShade hexColor)
+printDetails hexColor = printShade $ parseShade hexColor
 
 --
 --
@@ -97,8 +97,8 @@ printShade (Just c) = do
   (l', a , b)             = cieLABView d65 c
   (x , y , z)             = cieXYZView c
   (rgbeCode , rgbeShade ) = findClosestANSIColor c squaredDistanceSRGB
-  (rgbwCode , rgbwShade ) = findClosestANSIColor c squaredDistanceSRGB
-  (cie76Code, cie76Shade) = findClosestANSIColor c squaredDistanceSRGB
+  (rgbwCode , rgbwShade ) = findClosestANSIColor c weightedSquareDistanceSRGB
+  (cie76Code, cie76Shade) = findClosestANSIColor c squaredDeltaEab
 
 
 -- generate the 216 colours of ANSI 256 colors palette
