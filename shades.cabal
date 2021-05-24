@@ -4,25 +4,24 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 6c961f31546bbe1ae3095835d0bd0067f16a7eb22e26cf8b4bca6fab97ec57c9
+-- hash: baa01a46a69fa57c683b229977bfd26a7b5fcef7e2060f47a4850aa2ea9a0145
 
 name:           shades
 version:        0.1.0.0
 description:    Please see the README on GitHub at <https://github.com/githubuser/shades#readme>
-homepage:       https://github.com/githubuser/shades#readme
-bug-reports:    https://github.com/githubuser/shades/issues
+homepage:       https://github.com/lynxnot/shades#readme
+bug-reports:    https://github.com/lynxnot/shades/issues
 author:         lynxnot
 maintainer:     example@example.com
 copyright:      2021 lynxnot
-license:        BSD3
-license-file:   LICENSE
+license:        UNLICENSE
 build-type:     Simple
 extra-source-files:
     README.md
 
 source-repository head
   type: git
-  location: https://github.com/githubuser/shades
+  location: https://github.com/lynxnot/shades
 
 executable shades
   main-is: Main.hs
